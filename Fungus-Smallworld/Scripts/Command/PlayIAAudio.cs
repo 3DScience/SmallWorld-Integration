@@ -9,7 +9,7 @@ namespace Fungus
     public class PlayIAAudio : Command
     {
         [Tooltip("Node in IA-Audio that is played")]
-        public InAudioNode inAudioNode;
+        public InAudioNode iaAudioNode;
 
         [Tooltip("Not implemented yet")]
         public bool loop;
@@ -18,18 +18,18 @@ namespace Fungus
 
         public override void OnEnter()
         {
-            if (inAudioNode != null && gameObject != null)
-                InAudio.Play(gameObject, inAudioNode);
+            if (iaAudioNode != null && gameObject != null)
+                InAudio.Play(gameObject, iaAudioNode);
             Continue();
         }
 
         public override string GetSummary()
         {
-            if (inAudioNode == null)
+            if (iaAudioNode == null)
             {
                 return "Error: No IA-Audio node selected";
             }
-            else return inAudioNode.Name;
+            else return iaAudioNode.Name;
         }
 
         public override Color GetButtonColor()

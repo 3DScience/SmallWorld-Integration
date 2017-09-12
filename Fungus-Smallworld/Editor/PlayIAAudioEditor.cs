@@ -22,7 +22,7 @@ namespace Fungus.EditorUtils
 		{
 			serializedObject.Update();
 
-            //PlayIAAudio playIAAudio = target as PlayIAAudio;
+            InAudioNode iaAudioNode = target as InAudioNode;
 
             EditorGUILayout.PropertyField(iaAudioNodeProp);
 			EditorGUILayout.PropertyField(loopProp);
